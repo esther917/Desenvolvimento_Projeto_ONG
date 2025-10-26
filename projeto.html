@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projetos - Instituto Bem Viver</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">💙 Instituto Bem Viver</div>
+      <ul class="nav-menu">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="projeto.html" class="active">Projetos</a></li>
+        <li><a href="cadastro.html">Cadastro</a></li>
+        <li><a href="doacoes.html">Doações</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero hero-projetos">
+  <div class="hero-content">
+    <div class="hero-text">
+      <h1>Nossos Projetos</h1>
+      <p>Conheça as iniciativas que transformam a vida de muitos idosos com carinho, atenção e respeito.</p>
+    </div>
+    <div class="hero-image-container">
+      <img src="https://cotia.sp.gov.br/wp-content/uploads/2025/04/atividades-scfv-1.jpeg" alt="Idosos participando de atividade" class="hero-image" />
+    </div>
+  </div>
+</section>
+
+
+  <!-- Imagem de Destaque -->
+  <div class="projects-image-container">
+    <img 
+      src="https://cotia.sp.gov.br/wp-content/uploads/2025/04/atividades-scfv-1.jpeg" 
+      alt="Idosos participando de atividade" 
+      class="projects-image"
+    />
+  </div>
+
+  <!-- Projetos em Andamento -->
+  <section class="projects">
+    <h2>Projetos em Andamento</h2>
+    <div class="projects-grid">
+
+      <article class="project-card">
+        <h3>🧩 Oficinas de Memória</h3>
+        <p>Atividades cognitivas e lúdicas que ajudam a estimular a memória e manter a mente ativa dos nossos idosos.</p>
+        <span class="more">Saiba mais ↓</span>
+        <div class="extra-info">
+          Essas oficinas utilizam jogos, dinâmicas e lembranças afetivas para reforçar a autoestima, o raciocínio e a socialização dos participantes.
+        </div>
+      </article>
+
+      <article class="project-card">
+        <h3>💬 Roda de Conversa</h3>
+        <p>Momentos de partilha e escuta, onde os idosos conversam sobre suas histórias e aprendem uns com os outros.</p>
+        <span class="more">Saiba mais ↓</span>
+        <div class="extra-info">
+          As rodas são conduzidas por psicólogos e voluntários, promovendo trocas emocionais e fortalecendo o sentimento de pertencimento.
+        </div>
+      </article>
+
+      <article class="project-card">
+        <h3>🤝 Visitas Humanizadas</h3>
+        <p>Voluntários visitam lares e instituições parceiras para levar atenção, carinho e companhia.</p>
+        <span class="more">Saiba mais ↓</span>
+        <div class="extra-info">
+          As visitas incluem conversas, leitura, música e momentos de afeto que fazem toda a diferença no dia a dia dos idosos.
+        </div>
+      </article>
+
+      <article class="project-card">
+        <h3>💃 Atividades Físicas</h3>
+        <p>Aulas de alongamento, dança e exercícios leves para promover saúde, bem-estar e autonomia.</p>
+        <span class="more">Saiba mais ↓</span>
+        <div class="extra-info">
+          As aulas são adaptadas e conduzidas por profissionais especializados em movimento para a terceira idade.
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Instituto Bem Viver. Todos os direitos reservados.</p>
+    <p>Feito com ❤️ para transformar vidas e histórias!</p>
+  </footer>
+
+  <!-- Script para interação dos cards -->
+  <script>
+    const cards = document.querySelectorAll('.project-card');
+    cards.forEach(card => {
+      card.addEventListener('click', () => {
+        card.classList.toggle('active');
+      });
+    });
+  </script>
+</body>
+</html>
+
