@@ -836,6 +836,17 @@ footer {
   margin: 0 auto;
 }
 
+@keyframes pulsar {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.4); }
+  100% { transform: scale(1); }
+}
+
+#coracao {
+  display: inline-block;
+  animation: pulsar 1s infinite;
+}
+
   /* CSS apenas da imagem */
     .cadastro-image-container {
       text-align: center;
@@ -857,3 +868,5 @@ footer {
       transform: scale(1.03);
       box-shadow: 0 6px 18px rgba(0,0,0,0.2);
     }
+
+    
