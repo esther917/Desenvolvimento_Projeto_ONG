@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Doações - Instituto Bem Viver</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <nav>
+      <div class="logo">&#128153; Instituto Bem Viver</div>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="projeto.html">Projetos</a></li>
+        <li><a href="cadastro.html">Cadastro</a></li>
+        <li><a href="doacoes.html" class="active">Doações</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Doe e Transforme Vidas</h1>
+      <p>Seu apoio ajuda a proporcionar cuidado, carinho e atenção para nossos idosos. Cada contribuição faz diferença!</p>
+    </div>
+  </section>
+
+  <!-- Doações -->
+  <section class="doacoes-container">
+
+    <!-- Imagem no topo -->
+    <div class="doacoes-image-container">
+      <img src="https://economato.com.br/wp-content/uploads/voluntariado-na-captacao-de-recursos-schema-1920x1080.jpg" 
+           alt="Voluntariado em ação" 
+           class="doacoes-image">
+    </div>
+
+    <!-- Lista de doações -->
+    <div class="doacao-list">
+
+      <!-- Doação Financeira -->
+    <div class="doacao-card">
+      <h3>Doação Financeira</h3>
+      <p class="doacao-summary">Contribua com valores em dinheiro para apoiar nossos projetos.</p>
+      <p class="doacao-detail">
+        Sua doação financeira ajuda a custear atividades, alimentação, cuidados médicos e materiais para os idosos.
+        <br /><br />
+        <strong>Dados Bancários:</strong><br />
+        Banco: Banco do Brasil<br />
+        Agência: 1234-5<br />
+        Conta: 67890-1<br />
+        <strong>PIX:</strong> 11.222.333/0001-44
+      </p>
+      <span class="click-hint">(Clique)</span><br>
+      <button class="btn-doar">Doar Agora</button>
+    </div>
+
+    <!-- Doação de Alimentos -->
+    <div class="doacao-card">
+      <h3>Doação de Alimentos</h3>
+      <p class="doacao-summary">Doe alimentos não perecíveis para nossos idosos.</p>
+      <p class="doacao-detail">
+        Aceitamos arroz, feijão, macarrão, enlatados, leite e outros itens essenciais. Garantimos que chegarão diretamente aos beneficiários.
+        <br /><br />
+        <strong>Endereço para entrega:</strong> Rua do Bem, 123, Cotia - SP<br />
+        <strong>Telefone:</strong> (11) 98765-4321
+      </p>
+      <span class="click-hint">(Clique)</span><br>
+      <button class="btn-doar">Doar Agora</button>
+    </div>
+
+    <!-- Doação de Roupas -->
+    <div class="doacao-card">
+      <h3>Doação de Roupas</h3>
+      <p class="doacao-summary">Roupas limpas e em bom estado para nossos idosos.</p>
+      <p class="doacao-detail">
+        Roupas de frio, calçados e acessórios são sempre bem-vindos. Todas passam por triagem antes da distribuição.
+        <br /><br />
+        <strong>Endereço para entrega:</strong> Rua do Bem, 123, Cotia - SP<br />
+        <strong>Telefone:</strong> (11) 98765-4321
+      </p>
+      <span class="click-hint">(Clique)</span><br>
+      <button class="btn-doar">Doar Agora</button>
+    </div>
+
+  </div>
+
+    <!-- Mensagem de agradecimento -->
+    <p id="mensagem-doacao" class="mensagem-doacao"></p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Instituto Bem Viver. Todos os direitos reservados.</p>
+    <p>Feito com &#10084;&#65039; para transformar vidas.</p>
+  </footer>
+
+  <!-- Script -->
+  <script>
+    const cards = document.querySelectorAll('.doacao-card');
+    const mensagem = document.getElementById('mensagem-doacao');
+
+    cards.forEach(card => {
+      const detail = card.querySelector('.doacao-detail');
+      const button = card.querySelector('.btn-doar');
+
+      // Toggle detalhes ao clicar no card
+      card.addEventListener('click', (e) => {
+        if (e.target !== button) {
+          detail.style.display = detail.style.display === 'block' ? 'none' : 'block';
+        }
+      });
+
+      // Mensagem ao clicar em "Doar Agora"
+      button.addEventListener('click', (e) => {
+        e.stopPropagation();
+        mensagem.textContent = `Obrigado por escolher doar para "${card.querySelector('h3').textContent}"! 💙`;
+        mensagem.style.opacity = 1;
+        setTimeout(() => {
+          mensagem.style.opacity = 0;
+        }, 4000);
+      });
+    });
+  </script>
+
+</body>
+</html>

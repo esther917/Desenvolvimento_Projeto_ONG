@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de Voluntários</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <nav>
+      <div class="logo">&#128153; Instituto Bem Viver</div>
+      <ul id="navMenu">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="projeto.html">Projetos</a></li>
+        <li><a href="cadastro.html" class="active">Cadastro</a></li>
+        <li><a href="doacoes.html">Doações</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero hero-cadastro">
+    <div class="hero-content">
+      <h1>Cadastre-se como Voluntário</h1>
+      <p>Junte-se a nós e faça a diferença na vida de muitas pessoas através do voluntariado.</p>
+    </div>
+  </section>
+
+  <!-- Imagem -->
+  <div class="cadastro-image-container">
+    <img src="https://tse1.explicit.bing.net/th/id/OIP.CKed2ZaGjg3SLZZn6RyYSQHaEH?rs=1&pid=ImgDetMain&o=7&rm=3" 
+         alt="Voluntariado em ação" 
+         class="cadastro-image">
+  </div>
+
+  <!-- Formulário -->
+  <main>
+    <section class="signup-section">
+      <h2>Cadastre-se aqui para se tornar um voluntário</h2>
+
+      <form id="voluntarioForm" onsubmit="handleSubmit(event)">
+        <fieldset>
+          <legend>Dados Pessoais</legend>
+
+          <div class="form-group">
+            <label for="nome">Nome completo *</label>
+            <input type="text" id="nome" name="nome" required>
+          </div>
+
+          <div class="form-group">
+            <label for="telefone">Telefone *</label>
+            <input type="tel" id="telefone" name="telefone" placeholder="(11) 99999-9999" required>
+          </div>
+
+          <div class="form-group">
+            <label for="idade">Idade *</label>
+            <input type="number" id="idade" name="idade" min="18" max="75" required>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Disponibilidade</legend>
+
+          <div class="form-group">
+            <label for="disponibilidade">Quando você pode atuar como voluntário?</label>
+            <select id="disponibilidade" name="disponibilidade" required>
+              <option value="">Selecione...</option>
+              <option value="fins-de-semana">Fins de semana</option>
+              <option value="dias-uteis">Dias úteis</option>
+              <option value="feriados">Feriados</option>
+              <option value="horario-flexivel">Horários flexíveis</option>
+            </select>
+          </div>
+        </fieldset>
+
+        <button type="submit" class="btn-primary">Enviar Cadastro</button>
+        <p id="mensagem-sucesso" class="mensagem-sucesso" style="display: none;"></p>
+      </form>
+    </section>
+  </main>
+
+  <script>
+    function handleSubmit(event) {
+      event.preventDefault();
+      const mensagem = document.getElementById("mensagem-sucesso");
+      mensagem.textContent = "Cadastro enviado com sucesso! Obrigado por se voluntariar ❤️";
+      mensagem.style.display = "block";
+      event.target.reset();
+
+      setTimeout(() => {
+        mensagem.style.display = "none";
+      }, 5000);
+    }
+  </script>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Organização de Grupos Voluntariados. Todos os direitos reservados.</p>
+    <p>Feito com &#10084;&#65039; para transformar vidas e histórias!</p>
+  </footer>
+</body>
+</html>
